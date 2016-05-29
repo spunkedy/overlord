@@ -3,7 +3,7 @@
 docker rm -f overlord
 DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-result=`docker build --rm -t overlord $DIR/.`
+result=`docker --mtu=1404 build --rm -t overlord $DIR/.`
 echo "$result"
 
 echo ""
